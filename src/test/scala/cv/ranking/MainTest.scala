@@ -6,6 +6,7 @@ import org.scalatest.Matchers
 import Main.Doc
 import Main.sortDocsByQuery
 
+/**Tests the main application class. */
 class MainTest extends FlatSpec with Matchers {
 
   "Application" should "sort documents from corpus according to their relevance to the query" in {
@@ -38,7 +39,6 @@ class MainTest extends FlatSpec with Matchers {
 
     result.contains("c_plus_plus") should be(true)
     result.contains("c++") should be(false)
-
   }
 
   "Application" should "remove special characters" in {
