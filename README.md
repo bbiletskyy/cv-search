@@ -8,13 +8,16 @@ Another approach is to parse cv's and to extract important fields to database, t
 
 What if we could query our cv's-base by specifying a bunch of example cv's, to look for similar ones. This application sorts cv's in *.pdf, doc, txt formats from the "corpus" folder in order of their relevance to the cv's in the "query" folder. In other words you query by examples instead of keywords.
 
-
 Uses Tika parser and Sparks MLlib TF-IDF statistics implementation in order to sort a set of documents according to their similarity to the query qocuments. 
-
-Application sorts documents from the corpus folder according to treir similarity to the documents in teh query folder.
 
 How to run:
 
 1. Put documents to the corpus folder
 2. Put examples to the query folder
 3. Execute in command line: <code>sbt run</code> 
+
+See more:
+
+1. [Spark MLlib](http://spark.apache.org/mllib/)
+2. [Vector Space Model](https://en.wikipedia.org/wiki/Vector_space_model)
+3. [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)
