@@ -9,7 +9,7 @@ Another approach is to parse cv's and to extract important fields to database, t
 What if we could query our cv's-base by specifying a bunch of example cv's, to look for similar ones. This application sorts cv's in *.pdf, doc, txt formats from the "corpus" folder in order of their relevance to the cv's in the "query" folder. In other words you query by examples instead of keywords.
 
 
-Uses Sparks MLlib TF-IDF statistics implementation in order to sort a set of documents according to their similarity to the query qocuments. 
+Uses Tika parser and Sparks MLlib TF-IDF statistics implementation in order to sort a set of documents according to their similarity to the query qocuments. 
 
 Application sorts documents from the corpus folder according to treir similarity to the documents in teh query folder.
 
