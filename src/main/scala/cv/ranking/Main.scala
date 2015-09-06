@@ -15,7 +15,6 @@ import org.apache.spark.mllib.feature.HashingTF
  *  like "java", "teamlead", "scrum". This approach is not  very handy, since there are not so many
  *  combinations of keywords you can come up with, not enough to describe a much reacher set of sv's.
  *
- *
  *  Another approach is to parse cv's and to extract important fields to database, then to query for.
  *  This approach is very complex due to parsing and data extraction part, it also  requires the knowledge
  *  of a query language, such as SQL.
@@ -23,15 +22,12 @@ import org.apache.spark.mllib.feature.HashingTF
  *  What if we could query our cv's-base by specifying a bunch of example cv's, to look for similar ones.
  *  This application sorts cv's in *.pdf, doc, txt formats from the "corpus" folder in order of their relevance
  *  to the cv's in the "query" folder. In other words you query by examples instead of keywords.
- *
  */
 object Main {
   lazy val sc = new SparkContext(sparkConf("localhost", 7777))
   lazy val hashingTF = new HashingTF
-
   case class Doc(path: String, words: Seq[String])
   case class DocScore(doc: Doc, score: Double)
-
   /** 
    *  Copies cv's from the "corpus" folder to the "results" folder and sorts them according to cv's in the "query" folder.
    */
@@ -40,7 +36,6 @@ object Main {
     FileUtils.checkCorpusDir()
     FileUtils.checkQueryDir()
     FileUtils.checkResultsDir()
-
     //loading documents from the corpus folder, we store the path and the words of the document.
     val corpus = FileUtils.stringsFromCoprus.map(e => Doc(e._1, words(e._2))).toSet
     //loading all the words from the documents in the query folder into one a single sequence.
