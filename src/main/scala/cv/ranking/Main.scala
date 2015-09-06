@@ -105,7 +105,7 @@ object Main {
     val corpusTfIdfs = corpusIdfModel.transform(corpusTfs)
     //obtain TF from query
     val queryTfs = hashingTF.transform(sc.parallelize(Seq(query)))
-    //obtain TF-IDF fromquery
+    //obtain TF-IDF from the query
     val queryTfIdfs = corpusIdfModel.transform(queryTfs)
     //Create a sequence of pairs of document with its corresponding TF-IDF vector.
     //This procedure projects a text to a n-dimensional metric space, where inverse distance between TF-IDF vectors corresponds to similarity between original documents.  
