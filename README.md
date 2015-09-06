@@ -1,4 +1,4 @@
-CV-search application searches the corpus of cv's (actually any pdf, doc or txt document) using a set of documents as a query. 
+CV-search application searches the corpus of cv's (actually any pdf, doc or txt document) using a set of documents as a query. This code can be used as a tutorial for Text Mining and Natural Language Processing with Spark Machine Learning Library. 
 
 Promblem statement. Assume we have a bunch of CV's in different formats which we want to search.
 
