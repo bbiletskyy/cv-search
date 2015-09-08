@@ -1,4 +1,6 @@
-CV-search application searches the corpus of cv's (actually any pdf, doc or txt document) using a set of documents as a query. This code can be used as a tutorial for Text Mining and Natural Language Processing with Spark Machine Learning Library. 
+## CV-Search
+
+CV-search application searches the corpus of cv's (actually any *.pdf, -doc or -txt document) using another corpus of documents as a query. This code can be used as a tutorial for Text Mining and Natural Language Processing with Spark Machine Learning Library. 
 
 Promblem statement. Assume we have a bunch of CV's in different formats which we want to search.
 
@@ -8,13 +10,14 @@ Another approach is to parse cv's and to extract important fields to database, t
 
 What if we could query our cv's-base by specifying a bunch of example cv's, to look for similar ones. This application sorts cv's in *.pdf, doc, txt formats from the "corpus" folder in order of their relevance to the cv's in the "query" folder. In other words you query by examples instead of keywords.
 
-Uses Tika parser and Sparks MLlib TF-IDF statistics implementation in order to sort a set of documents according to their similarity to the query qocuments. 
+Uses Tika parser and Spark's MLlib TF-IDF statistics implementation in order to sort a set of documents according to their similarity to the query qocuments. 
 
 How to run:
 
-1. Put documents to the corpus folder
-2. Put examples to the query folder
+1. Put documents to the data/corpus folder (there are some examples there already)
+2. Put documents to the data/query folder (there are some examples there already)
 3. Execute in command line: <code>sbt run</code> 
+4. See results in the data/results folder
 
 See more:
 

@@ -47,6 +47,8 @@ object Main {
     //saving scored documents to the results folder
     result.foreach { d => FileUtils.copyFileToResults(d.doc.path, d.score) }
     println(s"${result.size} documents processed.")
+    //stopping Spark Context
+    sc.stop()
   }
 
   /**Extracts sequence of words from a string. The string will be normalised.*/
