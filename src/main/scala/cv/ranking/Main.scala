@@ -120,7 +120,7 @@ object Main {
   /** Crate Spark configuration */
   def sparkConf(driverHost: String, driverPort: Int) = new SparkConf(false)
     .setMaster("local[*]")
-    .setAppName("Spark Streaming with Scala and Akka")
+    .setAppName("CV-mining with Spark")
     .set("spark.logConf", "true")
     .set("spark.driver.port", driverPort.toString)
     .set("spark.driver.host", driverHost)
