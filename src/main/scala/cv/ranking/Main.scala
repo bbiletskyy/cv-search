@@ -107,11 +107,11 @@ object Main {
     //Create a sequence of pairs of document with its corresponding TF-IDF vector.
     //This procedure projects a text to a n-dimensional metric space, where inverse distance between TF-IDF vectors corresponds to similarity between original documents.  
     val documentTfIdfPairs = documentsRDD.zip(corpusTfIdfs)
-    //query's TF-IDF
+    //query's TF-IDF, project concatenated query docuents to a single point in finit-dimensional metric space.
     val queryTfIdf = queryTfIdfs.collect().head
-    //define score function that 
+    //define score function that is a squred distance between the query vector and each corpus document's vector. 
     def score(x: Vector) = Vectors.sqdist(x, queryTfIdf)
-    //sort documents according to the distance of each document to the query document,inother words to the documents' relevance to the query
+    //sort documents according to the distance of each document to the query document, in other words to the documents' relevance to the query
     val documentScorePairs = documentTfIdfPairs.map(e => DocScore(e._1, score(e._2))).sortBy(e => e.score, ascending = true)
     //collecting results  and converting them to a set
     documentScorePairs.collect().toSet
