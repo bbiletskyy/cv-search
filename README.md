@@ -16,7 +16,7 @@ Assume we have a bunch of CV's in different formats which we want to search.
 
 There are several ways we can compose search queries. One can search the text in cv's for keywords, like "java", "teamlead", "scrum". This approach is not  very handy, since there are not so many combinations of keywords you can come up with, not enough to describe a much reacher set of sv's.
 
-Another approach is to parse cv's and to extract important fields to database, then to query for. This approach is very complex due to parsing and data extraction part, it also  requires the knowledge  of a query language, such as SQL.
+Another approach is to parse cv's and to extract important fields to the database, then to query for. This approach is very complex due to the parsing and data extraction parts, thsi approach also  requires from user the knowledge  of a query language, such as SQL.
 
 What if we could query our cv's-base by specifying a bunch of example cv's, to look for similar ones. This application sorts cv's in *.pdf, doc, txt formats from the "corpus" folder in order of their relevance to the cv's in the "query" folder. In other words you query by examples instead of keywords.
 
