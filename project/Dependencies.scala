@@ -1,14 +1,14 @@
 import sbt._
 
 object Version {
-  val hadoop    = "2.6.0"
-  val logback   = "1.1.2"
-  val mockito   = "1.10.17"
-  val scala     = "2.11.4"
-  val scalaTest = "2.2.3"
-  val slf4j     = "1.7.6"
+  val hadoop    = "2.7.1"
+  val logback   = "1.1.3"
+  val mockito   = "1.10.19"
+  val scala     = "2.11.6"
+  val scalaTest = "2.2.4"
+  val slf4j     = "1.7.12"
   val spark     = "1.4.1"
-  val apacheTika     = "1.9"
+  val apacheTika     = "1.10"
 }
 
 object Library {
